@@ -23,6 +23,7 @@ export default class tekkom extends Component {
     componentDidMount() {
         axios({
             method: "get",
+            // url: "http://localhost:3000/user",
             url: "https://jsonplaceholder.typicode.com/users",
             headers: {
                 accept: "*/*"
@@ -46,7 +47,7 @@ export default class tekkom extends Component {
                     <Typography style={{ margin: "auto" }}>List Nama</Typography>
                 </AppBar>
                 
-                <Grid container md={11} spacing={4} style={{ marginTop: "50px", marginLeft: "10px"}}>
+                <Grid container md={11} spacing={4} style={{ marginTop: "50px", marginLeft: "auto", marginRight:"auto"}}>
                     
                     {this.state.tekkom.map((results, index) => {
                         return (
